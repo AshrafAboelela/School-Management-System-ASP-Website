@@ -1,0 +1,90 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="master.master.vb" Inherits="schoolsys.master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="styles/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div>
+
+<div >
+ <table style="background-color: #00FF00;width:100%;">
+     <tr>
+         <td style="text-align: center; width:251px;" >
+             <a href="login.aspx" style="color:darkorange">Sign Out</a>
+         </td>
+         <td style="text-align: center; width:209px;">
+             <a href="../settings/user_details.aspx" style="color:darkorange">User Settings</a>
+         </td>
+         <td style="text-align: center; width:266px;" >
+             <a href="../messaging/messaging.aspx" style="color:darkorange">Messaging</a>
+         </td>
+        <td style="text-align: center; width:238px;" >School System</td>
+     </tr>
+</table>
+</div>
+<br />
+<div >
+ <table style="background-color: #FFFF00;width:100%;">
+     <tr>
+         <td style="text-align: center; width:186px;" >
+             <a href="../home.aspx" style="color:#8B008B">DashBoard</a>
+         </td>
+         <td style="text-align: center; width:191px;" >
+             <a href="../settings/setting.aspx" style="color:#8B008B">Setting</a>
+         </td>
+         <td style="text-align: center; width:222px;" >
+             <a href="../attendance/attendance.aspx" style="color:#8B008B">Attendance</a>
+         </td>
+         <td style="text-align: center; width:170px;">
+             <a href="../students/students.aspx" style="color:#8B008B">Students</a>
+         </td>
+         <td style="text-align: center; width:212px;">
+             <a href="../timetable/timetable.aspx" style="color:#8B008B">Time Table</a>
+         </td>
+     </tr>
+</table>
+</div>
+</div>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+     <br />
+<div>
+ <table style="background-color: #FFFF00;width:100%;">
+     <tr>
+         <td style="text-align: center; width:186px;" >
+             <a href="../home.aspx" style="color:#8B008B">DashBoard</a>
+         </td>
+         <td style="text-align: center; width:191px;" >
+             <a href="../settings/setting.aspx" style="color:#8B008B">Setting</a>
+         </td>
+         <td style="text-align: center; width:222px;" >
+             <a href="../attendance/attendance.aspx" style="color:#8B008B">Attendance</a>
+         </td>
+         <td style="text-align: center; width:170px;">
+             <a href="../students/students.aspx" style="color:#8B008B">Students</a>
+         </td>
+         <td style="text-align: center; width:212px;">
+             <a href="../timetable/timetable.aspx" style="color:#8B008B">Time Table</a>
+         </td>
+     </tr>
+
+</table>
+  </div>
+<div style="background-color:  #00FF00; width:100%; text-align: center;">
+        <p>&copy; Copyright 0000. Company Name. All Rights Reserved.</p>
+</div>
+
+</body>
+</html>

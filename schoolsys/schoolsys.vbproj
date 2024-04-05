@@ -1,0 +1,659 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{597E452F-1C2C-4CFF-8928-2F6896379B1D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>schoolsys</RootNamespace>
+    <AssemblyName>schoolsys</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>schoolsys.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>schoolsys.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="attendance\add_attendance_emp.aspx" />
+    <Content Include="attendance\add_attendance_stu.aspx" />
+    <Content Include="attendance\attendance.aspx" />
+    <Content Include="attendance\empreport.aspx" />
+    <Content Include="attendance\stureport.aspx" />
+    <Content Include="comments\add_comments.aspx" />
+    <Content Include="comments\all_comments.aspx" />
+    <Content Include="comments\comments.aspx" />
+    <Content Include="comments\delete_comments.aspx" />
+    <Content Include="employees\add_employee.aspx" />
+    <Content Include="employees\delete_employee.aspx" />
+    <Content Include="employees\employees.aspx" />
+    <Content Include="employees\employee_permission.aspx" />
+    <Content Include="employees\employee_search.aspx" />
+    <Content Include="examinations\create_exam.aspx" />
+    <Content Include="examinations\examinations.aspx" />
+    <Content Include="examinations\exam_reports.aspx" />
+    <Content Include="examinations\online_exam.aspx" />
+    <Content Include="examinations\online_exam_report.aspx" />
+    <Content Include="guests\add_guests.aspx" />
+    <Content Include="guests\add_room.aspx" />
+    <Content Include="guests\guests.aspx" />
+    <Content Include="home.aspx" />
+    <Content Include="images\accepting.png" />
+    <Content Include="images\attendance.png" />
+    <Content Include="images\comments.png" />
+    <Content Include="images\employees.png" />
+    <Content Include="images\examinations.png" />
+    <Content Include="images\guests.png" />
+    <Content Include="images\hr.png" />
+    <Content Include="images\library.png" />
+    <Content Include="images\messaging.png" />
+    <Content Include="images\news.png" />
+    <Content Include="images\setting.png" />
+    <Content Include="images\sms.png" />
+    <Content Include="images\student.png" />
+    <Content Include="images\stu_search.png" />
+    <Content Include="images\timetable.png" />
+    <Content Include="library\add_books.aspx" />
+    <Content Include="library\all_books.aspx" />
+    <Content Include="library\books_cases.aspx" />
+    <Content Include="library\library.aspx" />
+    <Content Include="library\rec_books.aspx" />
+    <Content Include="library\return_books.aspx" />
+    <Content Include="library\search_books.aspx" />
+    <Content Include="library\sendingbookreport.aspx" />
+    <Content Include="library\sending_bindingbooks.aspx" />
+    <Content Include="library\sending_metaphorbooks.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="messaging\delete_msg.aspx" />
+    <Content Include="messaging\messaging.aspx" />
+    <Content Include="messaging\rec_message.aspx" />
+    <Content Include="messaging\sent_msg.aspx" />
+    <Content Include="news\add_news.aspx" />
+    <Content Include="news\all_news.aspx" />
+    <Content Include="news\delete_news.aspx" />
+    <Content Include="news\news.aspx" />
+    <Content Include="settings\add_users.aspx" />
+    <Content Include="settings\batchs.aspx" />
+    <Content Include="settings\emp_batchs.aspx" />
+    <Content Include="settings\search_user.aspx" />
+    <Content Include="settings\setting.aspx" />
+    <Content Include="settings\user_details.aspx" />
+    <Content Include="settings\user_permission.aspx" />
+    <Content Include="students\add_students.aspx" />
+    <Content Include="students\all_students.aspx" />
+    <Content Include="students\search_students.aspx" />
+    <Content Include="students\students.aspx" />
+    <Content Include="styles\style.css" />
+    <Content Include="timetable\add_days.aspx" />
+    <Content Include="timetable\create_exam_table.aspx" />
+    <Content Include="timetable\create_student_table.aspx" />
+    <Content Include="timetable\timetable.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="attendance\add_attendance_emp.aspx.designer.vb">
+      <DependentUpon>add_attendance_emp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="attendance\add_attendance_emp.aspx.vb">
+      <DependentUpon>add_attendance_emp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="attendance\add_attendance_stu.aspx.designer.vb">
+      <DependentUpon>add_attendance_stu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="attendance\add_attendance_stu.aspx.vb">
+      <DependentUpon>add_attendance_stu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="attendance\attendance.aspx.designer.vb">
+      <DependentUpon>attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="attendance\attendance.aspx.vb">
+      <DependentUpon>attendance.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="attendance\empreport.aspx.designer.vb">
+      <DependentUpon>empreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="attendance\empreport.aspx.vb">
+      <DependentUpon>empreport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="attendance\stureport.aspx.designer.vb">
+      <DependentUpon>stureport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="attendance\stureport.aspx.vb">
+      <DependentUpon>stureport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="comments\add_comments.aspx.designer.vb">
+      <DependentUpon>add_comments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="comments\add_comments.aspx.vb">
+      <DependentUpon>add_comments.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="comments\all_comments.aspx.designer.vb">
+      <DependentUpon>all_comments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="comments\all_comments.aspx.vb">
+      <DependentUpon>all_comments.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="comments\comments.aspx.designer.vb">
+      <DependentUpon>comments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="comments\comments.aspx.vb">
+      <DependentUpon>comments.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="comments\delete_comments.aspx.designer.vb">
+      <DependentUpon>delete_comments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="comments\delete_comments.aspx.vb">
+      <DependentUpon>delete_comments.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="employees\add_employee.aspx.designer.vb">
+      <DependentUpon>add_employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\add_employee.aspx.vb">
+      <DependentUpon>add_employee.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="employees\delete_employee.aspx.designer.vb">
+      <DependentUpon>delete_employee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\delete_employee.aspx.vb">
+      <DependentUpon>delete_employee.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="employees\employees.aspx.designer.vb">
+      <DependentUpon>employees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\employees.aspx.vb">
+      <DependentUpon>employees.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="employees\employee_permission.aspx.designer.vb">
+      <DependentUpon>employee_permission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\employee_permission.aspx.vb">
+      <DependentUpon>employee_permission.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="employees\employee_search.aspx.designer.vb">
+      <DependentUpon>employee_search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employees\employee_search.aspx.vb">
+      <DependentUpon>employee_search.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="examinations\create_exam.aspx.designer.vb">
+      <DependentUpon>create_exam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="examinations\create_exam.aspx.vb">
+      <DependentUpon>create_exam.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="examinations\examinations.aspx.designer.vb">
+      <DependentUpon>examinations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="examinations\examinations.aspx.vb">
+      <DependentUpon>examinations.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="examinations\exam_reports.aspx.designer.vb">
+      <DependentUpon>exam_reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="examinations\exam_reports.aspx.vb">
+      <DependentUpon>exam_reports.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="examinations\online_exam.aspx.designer.vb">
+      <DependentUpon>online_exam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="examinations\online_exam.aspx.vb">
+      <DependentUpon>online_exam.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="examinations\online_exam_report.aspx.designer.vb">
+      <DependentUpon>online_exam_report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="examinations\online_exam_report.aspx.vb">
+      <DependentUpon>online_exam_report.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="guests\add_guests.aspx.designer.vb">
+      <DependentUpon>add_guests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="guests\add_guests.aspx.vb">
+      <DependentUpon>add_guests.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="guests\add_room.aspx.designer.vb">
+      <DependentUpon>add_room.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="guests\add_room.aspx.vb">
+      <DependentUpon>add_room.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="guests\guests.aspx.designer.vb">
+      <DependentUpon>guests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="guests\guests.aspx.vb">
+      <DependentUpon>guests.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.vb">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.vb">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="library\add_books.aspx.designer.vb">
+      <DependentUpon>add_books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="library\add_books.aspx.vb">
+      <DependentUpon>add_books.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="library\all_books.aspx.designer.vb">
+      <DependentUpon>all_books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="library\all_books.aspx.vb">
+      <DependentUpon>all_books.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="library\books_cases.aspx.designer.vb">
+      <DependentUpon>books_cases.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="library\books_cases.aspx.vb">
+      <DependentUpon>books_cases.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="library\library.aspx.designer.vb">
+      <DependentUpon>library.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="library\library.aspx.vb">
+      <DependentUpon>library.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="library\rec_books.aspx.designer.vb">
+      <DependentUpon>rec_books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="library\rec_books.aspx.vb">
+      <DependentUpon>rec_books.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="library\return_books.aspx.designer.vb">
+      <DependentUpon>return_books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="library\return_books.aspx.vb">
+      <DependentUpon>return_books.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="library\search_books.aspx.designer.vb">
+      <DependentUpon>search_books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="library\search_books.aspx.vb">
+      <DependentUpon>search_books.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="library\sendingbookreport.aspx.designer.vb">
+      <DependentUpon>sendingbookreport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="library\sendingbookreport.aspx.vb">
+      <DependentUpon>sendingbookreport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="library\sending_bindingbooks.aspx.designer.vb">
+      <DependentUpon>sending_bindingbooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="library\sending_bindingbooks.aspx.vb">
+      <DependentUpon>sending_bindingbooks.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="library\sending_metaphorbooks.aspx.designer.vb">
+      <DependentUpon>sending_metaphorbooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="library\sending_metaphorbooks.aspx.vb">
+      <DependentUpon>sending_metaphorbooks.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="master.Master.designer.vb">
+      <DependentUpon>master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="master.Master.vb">
+      <DependentUpon>master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="messaging\delete_msg.aspx.designer.vb">
+      <DependentUpon>delete_msg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="messaging\delete_msg.aspx.vb">
+      <DependentUpon>delete_msg.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="messaging\messaging.aspx.designer.vb">
+      <DependentUpon>messaging.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="messaging\messaging.aspx.vb">
+      <DependentUpon>messaging.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="messaging\rec_message.aspx.designer.vb">
+      <DependentUpon>rec_message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="messaging\rec_message.aspx.vb">
+      <DependentUpon>rec_message.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="messaging\sent_msg.aspx.designer.vb">
+      <DependentUpon>sent_msg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="messaging\sent_msg.aspx.vb">
+      <DependentUpon>sent_msg.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="news\add_news.aspx.designer.vb">
+      <DependentUpon>add_news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="news\add_news.aspx.vb">
+      <DependentUpon>add_news.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="news\all_news.aspx.designer.vb">
+      <DependentUpon>all_news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="news\all_news.aspx.vb">
+      <DependentUpon>all_news.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="news\delete_news.aspx.designer.vb">
+      <DependentUpon>delete_news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="news\delete_news.aspx.vb">
+      <DependentUpon>delete_news.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="news\news.aspx.designer.vb">
+      <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="news\news.aspx.vb">
+      <DependentUpon>news.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="settings\add_users.aspx.designer.vb">
+      <DependentUpon>add_users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="settings\add_users.aspx.vb">
+      <DependentUpon>add_users.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="settings\batchs.aspx.designer.vb">
+      <DependentUpon>batchs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="settings\batchs.aspx.vb">
+      <DependentUpon>batchs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="settings\emp_batchs.aspx.designer.vb">
+      <DependentUpon>emp_batchs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="settings\emp_batchs.aspx.vb">
+      <DependentUpon>emp_batchs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="settings\search_user.aspx.designer.vb">
+      <DependentUpon>search_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="settings\search_user.aspx.vb">
+      <DependentUpon>search_user.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="settings\setting.aspx.designer.vb">
+      <DependentUpon>setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="settings\setting.aspx.vb">
+      <DependentUpon>setting.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="settings\user_details.aspx.designer.vb">
+      <DependentUpon>user_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="settings\user_details.aspx.vb">
+      <DependentUpon>user_details.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="settings\user_permission.aspx.designer.vb">
+      <DependentUpon>user_permission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="settings\user_permission.aspx.vb">
+      <DependentUpon>user_permission.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="sqlclass.vb" />
+    <Compile Include="students\add_students.aspx.designer.vb">
+      <DependentUpon>add_students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="students\add_students.aspx.vb">
+      <DependentUpon>add_students.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="students\all_students.aspx.designer.vb">
+      <DependentUpon>all_students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="students\all_students.aspx.vb">
+      <DependentUpon>all_students.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="students\search_students.aspx.designer.vb">
+      <DependentUpon>search_students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="students\search_students.aspx.vb">
+      <DependentUpon>search_students.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="students\students.aspx.designer.vb">
+      <DependentUpon>students.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="students\students.aspx.vb">
+      <DependentUpon>students.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="timetable\add_days.aspx.designer.vb">
+      <DependentUpon>add_days.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="timetable\add_days.aspx.vb">
+      <DependentUpon>add_days.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="timetable\create_exam_table.aspx.designer.vb">
+      <DependentUpon>create_exam_table.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="timetable\create_exam_table.aspx.vb">
+      <DependentUpon>create_exam_table.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="timetable\create_student_table.aspx.designer.vb">
+      <DependentUpon>create_student_table.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="timetable\create_student_table.aspx.vb">
+      <DependentUpon>create_student_table.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="timetable\timetable.aspx.designer.vb">
+      <DependentUpon>timetable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="timetable\timetable.aspx.vb">
+      <DependentUpon>timetable.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="variables.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="master.Master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1417</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1417/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
